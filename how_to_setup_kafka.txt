@@ -1,0 +1,14 @@
+how to setup and run kafka cli
+go to the kafka base folder then run run the following commands in different terminals
+
+1>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties //for starting zookeeper server
+    .\bin\windows\zookeeper-server-stop.bat .\config\zookeeper.properties //for stoping zookeeper server
+
+2>.\bin\windows\kafka-server-start.bat .\config\server.properties //for starting kafka broker
+    .\bin\windows\kafka-server-stop.bat .\config\server.properties //for stoping kafka broker
+
+3>.\bin\windows\kafka-topics.bat --create --topic <<topic name>> --bootstrap-server localhost:9092 //for creating topic
+4>.\bin\windows\kafka-console-producer.bat --topic <<topic name>> --bootstrap-server localhost:9092 //for running the producer
+5>.\bin\windows\kafka-console-consumer.bat --topic <<topic name>> --from-beginning --bootstrap-server localhost:9092//for running the consumer
+
+to get the list of topics-> .\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092 
